@@ -4,7 +4,7 @@ const addRequests = async (url) => {
     throw new Error("URL param is missing");
   }
   try {
-    const requestsLength = await Requests.count();
+    const requestsLength = await Requests.countDocuments();
     const newRequest = Requests.collection.insertOne({
       url,
       id: requestsLength + 1,

@@ -2,7 +2,7 @@ module.exports = {
   apps: [
     {
       script: "bin/www",
-      instances: 16,
+      instances: 4,
       watch: ".",
     },
   ],
