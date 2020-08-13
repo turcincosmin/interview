@@ -15,8 +15,11 @@ const verifyRequest = async () => {
     console.log(error);
   }
 
-  // Fetch id and url from the PROCCESING request to update status
   const { id, url } = requestDetails.value || {};
+  if (!id) {
+    return; // exit if we don't have any request with status NEW
+  }
+  // Fetch id and url from the PROCCESING request to update status
   console.log(`Request with id: ${id} is now in status PROCCESING`);
   try {
     // Step 2 request url field from the PROCCESING request to fetch the status
