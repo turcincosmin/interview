@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const addRequest = require("./repository/addRequest");
 
+// Endpoint to add a new request
 router.post("/add-request", async (req, res) => {
   const { url } = req.body;
   try {

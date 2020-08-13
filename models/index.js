@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
+// Requests table structure and types
 const RequestsSchema = new Schema({
   id: Number,
   url: String,

@@ -4,7 +4,7 @@ require("../../models");
  * Make any changes you need to make to the database here
  */
 async function up() {
-  // Write migration here
+  // Migration to add default requests (demo purpose)
   const requests = [
     {
       id: 1,
@@ -31,7 +31,7 @@ async function up() {
  * Make any changes that UNDO the up function side effects here (if possible)
  */
 async function down() {
-  // Write migration here
+  // Drop requests table to undo migration
   await this("requests").collection.drop();
 }
 

@@ -26,11 +26,10 @@ db.once("open", () => {
   console.log("MongoDB conected!");
 });
 
-const app = express();
-
 // Import and run crons
-
 require("./jobs/verifyRequestAndSaveResult");
+
+const app = express();
 
 app.use(logger("dev"));
 app.use(express.json());
